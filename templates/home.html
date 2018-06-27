@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+h1 {
+    color: red;
+    text-align: center;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Exercises from pymi.vn: <a href="https://github.com/awesome-jobs/vietnam/issues"> </a>Awesome-job VN</h1>
+
+
+<table id="t01">
+  <tr>
+    <th>Job name</th>
+    <th>Link</th>
+  </tr>
+  {% for numb, name in jobs %}
+  <tr>
+    <td>{{name}}</td>
+    <td><a href="/{{ numb }}"> {{ numb }} </a></td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+</body>
+</html>
